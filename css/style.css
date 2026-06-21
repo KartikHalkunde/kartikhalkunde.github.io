@@ -1,0 +1,280 @@
+ * {
+            box-sizing: border-box;
+        }
+        h1, h2, h3, h4, h5, h6, ol, p, ul {
+            margin: 0;
+        }
+        a {
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+        }
+        .mdl-shadow--2dp { z-index: 2; }
+        .mdl-shadow--3dp { z-index: 3; }
+        .mdl-shadow--4dp { z-index: 4; }
+        .mdl-shadow--6dp { z-index: 6; }
+        .mdl-shadow--8dp { z-index: 8; }
+        .mdl-shadow--16dp { z-index: 16; }
+        .mdl-shadow--24dp { z-index: 24; }
+        .mdi-18px { width: 18px; height: 18px; line-height: 18px; }
+        .mdi-24px { width: 24px; height: 24px; line-height: 24px; }
+        .mdi-36px { width: 36px; height: 36px; line-height: 36px; }
+        .mdi-48px { width: 48px; height: 48px; line-height: 48px; }
+        
+        body > div {
+            display: flex;
+        }
+        @media (max-width: 599px) {
+            body > div {
+                flex-direction: column;
+            }
+        }
+        body > div > header {
+            width: 33.33%;
+        }
+        @media (max-width: 959px) {
+            body > div > header {
+                width: 41.67%;
+            }
+        }
+        @media (max-width: 599px) {
+            body > div > header {
+                width: 100%;
+            }
+        }
+        body > div > header .title {
+            padding: 32px 32px 32px 28px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        @media (max-width: 959px) and (min-width: 599px) {
+            body > div > header .title {
+                padding-left: 16px;
+                gap: 14px;
+            }
+        }
+        @media (max-width: 599px) {
+            body > div > header .title {
+                padding: 24px 16px;
+                gap: 14px;
+            }
+        }
+        .profile-circle {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            border: 1.5px solid rgba(255, 255, 255, 0.50);
+            overflow: hidden;
+            flex-shrink: 0;
+            background: rgba(255, 255, 255, 0.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .profile-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .profile-circle-placeholder {
+            color: rgba(255,255,255,0.5);
+            font-size: 36px;
+            line-height: 1;
+        }
+        .title-text > p {
+            margin-top: 8px;
+        }
+        body > div > header .about,
+        body > div > header .contact,
+        body > div > header .skills {
+            display: flex;
+            padding: 0 32px 32px 32px;
+        }
+        @media (max-width: 959px) and (min-width: 599px) {
+            body > div > header .about,
+            body > div > header .contact,
+            body > div > header .skills {
+                padding-left: 16px;
+            }
+        }
+        body > div > header .about > div,
+        body > div > header .contact > div,
+        body > div > header .skills > div {
+            margin-left: 24px;
+        }
+        @media (max-width: 959px) and (min-width: 599px) {
+            body > div > header .about > div,
+            body > div > header .contact > div,
+            body > div > header .skills > div {
+                margin-left: 16px;
+            }
+        }
+        body > div > header .about > div > h2,
+        body > div > header .contact > div > h2,
+        body > div > header .skills > div > h2 {
+            line-height: 24px;
+        }
+        body > div > header .about > div > p,
+        body > div > header .contact > div > p,
+        body > div > header .skills > div > p,
+        body > div > header .about > div > ul,
+        body > div > header .contact > div > ul,
+        body > div > header .skills > div > ul {
+            margin-top: 16px;
+        }
+        body > div > header .about > div > p + p {
+            margin-top: 4px;
+        }
+        body > div > header .about > div > ul,
+        body > div > header .contact > div > ul,
+        body > div > header .skills > div > ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        body > div > header .about a,
+        body > div > header .contact a,
+        body > div > header .skills a {
+            color: white;
+            text-decoration: none;
+        }
+        body > div > header .about {
+            padding-top: 32px;
+        }
+        body > div > header .contact > div > ul > li {
+            display: flex;
+        }
+        body > div > header .contact > div > ul > li:not(:first-child) {
+            margin-top: 8px;
+        }
+        body > div > header .contact > div > ul > li > i {
+            font-size: 18px;
+        }
+        body > div > header .contact > div > ul > li > a,
+        body > div > header .contact > div > ul > li > span {
+            margin-left: 8px;
+            line-height: 18px;
+        }
+        body > div > header .skills > div > ul > li:not(:first-child) {
+            margin-top: 12px;
+        }
+        body > div > header .skills > div > ul > li p:first-child {
+            text-transform: uppercase;
+        }
+        body > div > header .skills > div > ul > li p:last-child {
+            margin-top: 8px;
+        }
+        body > div > main {
+            width: 66.67%;
+            padding: 32px 32px 120px 32px;
+        }
+        @media (max-width: 959px) {
+            body > div > main {
+                width: 58.33%;
+            }
+        }
+        @media (max-width: 599px) {
+            body > div > main {
+                width: 100%;
+                padding: 16px 16px 88px 16px;
+            }
+        }
+        body > div > main > section {
+            width: 100% !important;
+            padding: 32px;
+            border-radius: 2px;
+        }
+        body > div > main > section:not(:first-child) {
+            margin-top: 32px;
+        }
+        @media (max-width: 599px) {
+            body > div > main > section:not(:first-child) {
+                margin-top: 16px;
+            }
+        }
+        body > div > main > section > h2 {
+            font-weight: 500 !important;
+        }
+        body > div > main > section > section {
+            padding-top: 32px;
+        }
+        body > div > main > section > section a {
+            font-weight: inherit;
+        }
+        body > div > main > section > section > p {
+            margin-top: 4px;
+            line-height: 1.2 !important;
+        }
+        body > div > main > section > section > p:first-of-type {
+            margin-top: 12px;
+        }
+        body > div > main > section > section > p:last-of-type {
+            font-style: italic;
+        }
+        body > div > main > section > section > p a {
+            color: inherit;
+            text-decoration: none;
+        }
+        body > div > main > section > section > ul {
+            margin-top: 12px;
+            padding-left: 1em;
+            letter-spacing: normal !important;
+        }
+        body > a.fab-btn {
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            position: fixed !important;
+            right: 32px;
+            bottom: 32px;
+            background-color: #FFB300 !important;
+            color: #1a1a1a !important;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25) !important;
+            z-index: 6;
+        }
+        body > a.fab-btn i {
+            color: #1a1a1a !important;
+        }
+        @media (max-width: 599px) {
+            body > a.fab-btn {
+                right: 16px;
+                bottom: 16px;
+            }
+        }
+
+        /* ── Custom color palette ── */
+        :root {
+            --sidebar:    #0A3D66;
+            --header:     #0F4C81;
+            --accent:     #1D70B8;
+            --background: #ECEFF1;
+            --card:       #FFFFFF;
+        }
+
+        /* Sidebar background (indigo-700 in MDL) */
+        .mdl-color--indigo-700 {
+            background-color: var(--sidebar) !important;
+        }
+        /* Title strip background (indigo-500 in MDL) */
+        .mdl-color--indigo-500 {
+            background-color: var(--header) !important;
+        }
+        /* Accent text on cards (indigo-500 text) */
+        .mdl-color-text--indigo-500 {
+            color: var(--accent) !important;
+        }
+        /* Main content area background */
+        .mdl-color--blue-grey-50 {
+            background-color: var(--background) !important;
+        }
+        /* Card sections */
+        .mdl-color--white {
+            background-color: var(--card) !important;
+        }
+        /* FAB / MDL colored button */
+        .mdl-button--colored,
+        .mdl-button--colored:focus:not(:active) {
+            background-color: #F5C518 !important;
+            color: #1a1a1a !important;
+        }
+
