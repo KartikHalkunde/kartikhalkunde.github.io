@@ -293,3 +293,9 @@
             vertical-align: middle;
             line-height: 1;
         }
+        .contact-svg-icon {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+            vertical-align: middle;
+        }
