@@ -299,3 +299,159 @@
             flex-shrink: 0;
             vertical-align: middle;
         }
+
+        /* ── Vertical Section Navigation ── */
+        .section-nav {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 5;
+            padding: 12px 0 12px 20px;
+        }
+
+        .section-nav-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 10px;
+        }
+
+        .section-nav-item {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            text-decoration: none;
+            padding: 3px 0;
+            cursor: pointer;
+            background: transparent;
+            border: none;
+            color: inherit;
+            outline: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .section-nav-item:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 3px;
+            border-radius: 2px;
+        }
+
+        /* Indicator Lines */
+        .section-nav-line {
+            display: inline-block;
+            height: 2px;
+            width: 14px;
+            background-color: rgba(0, 0, 0, 0.20);
+            border-radius: 1px;
+            transition: width 200ms ease, background-color 200ms ease;
+            flex-shrink: 0;
+        }
+
+        .section-nav-item.active .section-nav-line {
+            width: 26px;
+            background-color: var(--accent);
+        }
+
+        .section-nav-item:hover .section-nav-line,
+        .section-nav-item:focus-visible .section-nav-line {
+            background-color: var(--accent);
+        }
+
+        /* Section Labels */
+        .section-nav-label {
+            opacity: 0;
+            pointer-events: none;
+            transform: translateX(4px);
+            transition: opacity 200ms ease, transform 200ms ease, font-size 200ms ease;
+            white-space: nowrap;
+            font-size: 11px;
+            font-weight: 400;
+            color: #546E7A;
+            margin-right: 8px;
+            user-select: none;
+            line-height: 1;
+        }
+
+        /* Hover & Focus-within: Reveal section labels */
+        .section-nav:hover .section-nav-label,
+        .section-nav:focus-within .section-nav-label {
+            pointer-events: auto;
+            transform: translateX(0);
+        }
+
+        /* Active section label */
+        .section-nav:hover .section-nav-item.active .section-nav-label,
+        .section-nav:focus-within .section-nav-item.active .section-nav-label {
+            opacity: 1;
+            color: var(--accent);
+            font-weight: 500;
+            font-size: 13px;
+        }
+
+        /* Surrounding section labels hierarchy */
+        .section-nav:hover .section-nav-item[data-distance="1"] .section-nav-label,
+        .section-nav:focus-within .section-nav-item[data-distance="1"] .section-nav-label {
+            opacity: 0.35;
+            font-size: 11px;
+            color: #546E7A;
+        }
+
+        .section-nav:hover .section-nav-item[data-distance="2"] .section-nav-label,
+        .section-nav:focus-within .section-nav-item[data-distance="2"] .section-nav-label {
+            opacity: 0.18;
+            font-size: 11px;
+            color: #546E7A;
+        }
+
+        .section-nav:hover .section-nav-item[data-distance="3"] .section-nav-label,
+        .section-nav:focus-within .section-nav-item[data-distance="3"] .section-nav-label {
+            opacity: 0.10;
+            font-size: 11px;
+            color: #546E7A;
+        }
+
+        /* Direct item hover/focus */
+        .section-nav .section-nav-item:hover .section-nav-label,
+        .section-nav .section-nav-item:focus-visible .section-nav-label {
+            opacity: 0.9 !important;
+        }
+
+        .section-nav .section-nav-item.active:hover .section-nav-label {
+            opacity: 1 !important;
+        }
+
+        /* Tablet adaptation */
+        @media (max-width: 959px) {
+            .section-nav {
+                right: 12px;
+                padding-left: 12px;
+            }
+            .section-nav-list {
+                gap: 8px;
+            }
+            .section-nav-line {
+                width: 12px;
+            }
+            .section-nav-item.active .section-nav-line {
+                width: 20px;
+            }
+        }
+
+        /* Mobile: completely hidden */
+        @media (max-width: 599px) {
+            .section-nav {
+                display: none !important;
+            }
+        }
+
+        /* Reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            .section-nav-line,
+            .section-nav-label {
+                transition: none !important;
+            }
+        }

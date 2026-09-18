@@ -23,7 +23,7 @@
     <div>
         <!-- Sidebar / Header Area -->
         <header class="mdl-color--indigo-700 mdl-color-text--white mdl-shadow--4dp">
-            <section class="title mdl-color--indigo-500">
+            <section class="title mdl-color--indigo-500" id="home">
                 <div class="profile-circle">
                     <img src="./assets/images/profile.jpg" alt="Kartik Halkunde"
                         onerror="this.style.display='none';this.parentElement.innerHTML='<span class=\'profile-circle-placeholder mdi mdi-account\'></span>'">
@@ -34,7 +34,7 @@
                 </div>
             </section>
 
-            <section class="about">
+            <section class="about" id="about">
                 <i class="mdi mdi-account mdi-24px"></i>
                 <div>
                     <h2 class="mdl-typography--title">About</h2>
@@ -42,7 +42,7 @@
                 </div>
             </section>
 
-            <section class="contact">
+            <section class="contact" id="contact">
                 <i class="mdi mdi-phone mdi-24px"></i>
                 <div>
                     <h2 class="mdl-typography--title">Contact</h2>
@@ -77,7 +77,7 @@
                 </div>
             </section>
 
-            <section class="skills">
+            <section class="skills" id="skills">
                 <i class="mdi mdi-chart-bar mdi-24px"></i>
                 <div>
                     <h2 class="mdl-typography--title">Technical Skills</h2>
@@ -118,7 +118,7 @@
         <main class="mdl-color--blue-grey-50">
 
             <!-- Education Section -->
-            <section class="mdl-color--white mdl-shadow--2dp">
+            <section class="mdl-color--white mdl-shadow--2dp" id="education">
                 <h2 class="mdl-typography--display-1">Education</h2>
                 <section>
                     <h3 class="mdl-typography--title mdl-color-text--indigo-500">Vidyavardhini College of Engineering &
@@ -135,7 +135,7 @@
             </section>
 
             <!-- Experience Section -->
-            <section class="mdl-color--white mdl-shadow--2dp">
+            <section class="mdl-color--white mdl-shadow--2dp" id="experience">
                 <h2 class="mdl-typography--display-1">Experience</h2>
                 <section>
                     <h3 class="mdl-typography--title mdl-color-text--indigo-500">Tata Communications Limited</h3>
@@ -157,7 +157,7 @@
             </section>
 
             <!-- Projects Section -->
-            <section class="mdl-color--white mdl-shadow--2dp">
+            <section class="mdl-color--white mdl-shadow--2dp" id="projects">
                 <h2 class="mdl-typography--display-1">Projects</h2>
 
                 <section>
@@ -215,7 +215,7 @@
             </section>
 
             <!-- Beyond Academics Section -->
-            <section class="mdl-color--white mdl-shadow--2dp">
+            <section class="mdl-color--white mdl-shadow--2dp" id="achievements">
                 <h2 class="mdl-typography--display-1">Achievements & Extracurricular</h2>
 
                 <!-- Achievement -->
@@ -288,6 +288,36 @@
             </section>
         </main>
     </div>
+
+    <!-- Section Navigation Progress Indicator -->
+    <nav class="section-nav" aria-label="Section navigation">
+        <ul class="section-nav-list" role="list">
+            <li>
+                <a href="#education" class="section-nav-item active" aria-label="Navigate to Education section" data-section="education">
+                    <span class="section-nav-label">Education</span>
+                    <span class="section-nav-line" aria-hidden="true"></span>
+                </a>
+            </li>
+            <li>
+                <a href="#experience" class="section-nav-item" aria-label="Navigate to Experience section" data-section="experience">
+                    <span class="section-nav-label">Experience</span>
+                    <span class="section-nav-line" aria-hidden="true"></span>
+                </a>
+            </li>
+            <li>
+                <a href="#projects" class="section-nav-item" aria-label="Navigate to Projects section" data-section="projects">
+                    <span class="section-nav-label">Projects</span>
+                    <span class="section-nav-line" aria-hidden="true"></span>
+                </a>
+            </li>
+            <li>
+                <a href="#achievements" class="section-nav-item" aria-label="Navigate to Achievements & Extracurricular section" data-section="achievements">
+                    <span class="section-nav-label">Achievements & Extracurricular</span>
+                    <span class="section-nav-line" aria-hidden="true"></span>
+                </a>
+            </li>
+        </ul>
+    </nav>
 
     <!-- Floating Action Button -->
     <a href="./assets/documents/resume/KartikHalkunde.pdf" target="_blank" title="Download PDF"
