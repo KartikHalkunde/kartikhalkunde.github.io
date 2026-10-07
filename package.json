@@ -1,0 +1,13 @@
+{
+  "name": "kartik-resume",
+  "private": true,
+  "scripts": {
+    "build": "esbuild js/material-web.js --bundle --format=iife --target=es2020 --outfile=js/material-web.bundle.js"
+  },
+  "dependencies": {
+    "@material/web": "2.5.0"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  }
+}

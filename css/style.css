@@ -1,4 +1,17 @@
- * {
+        :root {
+            --md-ref-typeface-brand: Roboto, Helvetica, Arial, sans-serif;
+            --md-ref-typeface-plain: Roboto, Helvetica, Arial, sans-serif;
+            --md-sys-typescale-title-large-size: 20px;
+            --md-sys-typescale-title-large-line-height: 28px;
+            --md-sys-color-primary: #0f4c81;
+            --md-sys-color-on-primary: #ffffff;
+        }
+        body {
+            margin: 0;
+            color: rgba(0, 0, 0, 0.87);
+            font: 14px/20px Roboto, Helvetica, Arial, sans-serif;
+        }
+        * {
             box-sizing: border-box;
         }
         h1, h2, h3, h4, h5, h6, ol, p, ul {
@@ -8,13 +21,19 @@
             overflow-wrap: break-word;
             word-wrap: break-word;
         }
-        .mdl-shadow--2dp { z-index: 2; }
-        .mdl-shadow--3dp { z-index: 3; }
-        .mdl-shadow--4dp { z-index: 4; }
-        .mdl-shadow--6dp { z-index: 6; }
-        .mdl-shadow--8dp { z-index: 8; }
-        .mdl-shadow--16dp { z-index: 16; }
-        .mdl-shadow--24dp { z-index: 24; }
+        .site-sidebar {
+            color: #fff;
+            background-color: #0a3d66;
+            box-shadow: 0 4px 5px rgba(0, 0, 0, 0.14), 0 1px 10px rgba(0, 0, 0, 0.12);
+            z-index: 4;
+        }
+        .title { background-color: #0f4c81; }
+        .content { background-color: #eceff1; }
+        .resume-card {
+            background-color: #fff;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px rgba(0, 0, 0, 0.2);
+        }
+        .accent-text { color: #1976d2; }
         .mdi-18px { width: 18px; height: 18px; line-height: 18px; }
         .mdi-24px { width: 24px; height: 24px; line-height: 24px; }
         .mdi-36px { width: 36px; height: 36px; line-height: 36px; }
@@ -160,6 +179,7 @@
         }
         body > div > header .skills > div > ul > li p:first-child {
             text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.6);
         }
         body > div > header .skills > div > ul > li p:last-child {
             margin-top: 8px;
@@ -220,62 +240,68 @@
             padding-left: 1em;
             letter-spacing: normal !important;
         }
-        body > a.fab-btn {
-            display: flex !important;
-            align-items: center;
-            justify-content: center;
+        .skills .md-typescale-body-small {
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: normal;
+        }
+        @media (min-width: 600px) {
+            .content .md-typescale-display-small {
+                font-size: 34px;
+                line-height: 40px;
+            }
+            .content .md-typescale-title-large {
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 20px;
+                letter-spacing: 0.02em;
+            }
+            .content .md-typescale-body-large {
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: 0.04em;
+            }
+            .content .md-typescale-body-medium {
+                line-height: 24px;
+                letter-spacing: 0;
+            }
+            body > div > main > section > section > p {
+                line-height: 1.2 !important;
+            }
+        }
+        @media (max-width: 599px) {
+            .content .md-typescale-body-large {
+                font-size: 14px;
+                line-height: 20px;
+                letter-spacing: normal;
+            }
+            .content .md-typescale-body-medium {
+                letter-spacing: normal;
+            }
+        }
+        body > .fab-btn {
             position: fixed !important;
             right: 32px;
             bottom: 32px;
-            background-color: #FFB300 !important;
-            color: #1a1a1a !important;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25) !important;
             z-index: 6;
-        }
-        body > a.fab-btn i {
-            color: #1a1a1a !important;
+            --md-filled-icon-button-container-color: #ffb300;
+            --md-filled-icon-button-icon-color: #1a1a1a;
+            --md-filled-icon-button-hover-icon-color: #1a1a1a;
+            --md-filled-icon-button-focus-icon-color: #1a1a1a;
+            --md-filled-icon-button-pressed-icon-color: #1a1a1a;
+            --md-filled-icon-button-hover-state-layer-color: #000;
+            --md-filled-icon-button-hover-state-layer-opacity: 0.12;
+            --md-filled-icon-button-container-width: 56px;
+            --md-filled-icon-button-container-height: 56px;
+            --md-filled-icon-button-container-shape: 50%;
+            border-radius: 50%;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
         }
         @media (max-width: 599px) {
-            body > a.fab-btn {
+            body > .fab-btn {
                 right: 16px;
                 bottom: 16px;
             }
-        }
-
-        /* ── Custom color palette ── */
-        :root {
-            --sidebar:    #0A3D66;
-            --header:     #0F4C81;
-            --accent:     #1D70B8;
-            --background: #ECEFF1;
-            --card:       #FFFFFF;
-        }
-
-        /* Sidebar background (indigo-700 in MDL) */
-        .mdl-color--indigo-700 {
-            background-color: var(--sidebar) !important;
-        }
-        /* Title strip background (indigo-500 in MDL) */
-        .mdl-color--indigo-500 {
-            background-color: var(--header) !important;
-        }
-        /* Accent text on cards (indigo-500 text) */
-        .mdl-color-text--indigo-500 {
-            color: var(--accent) !important;
-        }
-        /* Main content area background */
-        .mdl-color--blue-grey-50 {
-            background-color: var(--background) !important;
-        }
-        /* Card sections */
-        .mdl-color--white {
-            background-color: var(--card) !important;
-        }
-        /* FAB / MDL colored button */
-        .mdl-button--colored,
-        .mdl-button--colored:focus:not(:active) {
-            background-color: #F5C518 !important;
-            color: #1a1a1a !important;
         }
 
         /* Certificate links */
