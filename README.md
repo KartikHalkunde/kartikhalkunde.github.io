@@ -1,12 +1,5 @@
 # Kartik Halkunde Resume
 
-This is a static resume site using Material Web typography and a Material Web icon button. The generated JavaScript bundle is checked in so GitHub Pages can serve the site without a build step.
-
-To update the Material Web bundle:
-
-```sh
-npm ci
-npm run build
-```
+This is a static resume site using local Material Web typography styles and a Material Web icon button loaded from esm.run. It needs no npm install or build step. The button requires an internet connection to load.
 
 Open `index.html` locally or serve the repository root as a static site. The page colors and layout live in `css/style.css`.

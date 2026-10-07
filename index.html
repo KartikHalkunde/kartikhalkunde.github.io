@@ -295,7 +295,16 @@
         <i class="mdi mdi-download mdi-24px" aria-hidden="true"></i>
     </md-filled-icon-button>
 
-    <script defer src="./js/material-web.bundle.js"></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "@material/web/": "https://esm.run/@material/web@2.5.0/"
+            }
+        }
+    </script>
+    <script type="module">
+        import '@material/web/iconbutton/filled-icon-button.js';
+    </script>
 
 </body>
 
